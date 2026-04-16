@@ -1,0 +1,129 @@
+:root {
+  --bg: #0b1220;
+  --surface: #131d30;
+  --surface-2: #1a2740;
+  --text: #eef4ff;
+  --text-dim: #9fb2d6;
+  --brand: #6ea8fe;
+  --danger: #ff6b6b;
+  --success: #4fd1a5;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #070c17 0%, #0b1220 100%);
+  color: var(--text);
+}
+
+.main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.header p {
+  color: var(--text-dim);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #223250;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+input,
+select,
+button {
+  border-radius: 10px;
+  border: 1px solid #2f4469;
+  background: var(--surface-2);
+  color: var(--text);
+  padding: 0.6rem 0.75rem;
+}
+
+button {
+  cursor: pointer;
+  background: #23457d;
+  border-color: #2d5ba3;
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #233352;
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.badge {
+  background: #21477e;
+  color: #cfe2ff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.error {
+  color: var(--danger);
+  margin: 0;
+}
+
+.success {
+  color: var(--success);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
